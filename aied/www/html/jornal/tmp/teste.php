@@ -2,8 +2,14 @@
     <body>
         <?php
 
-            $grupo = array("nome" => "kazu", "profissao" => "admin");
-            print($grupo['nome']);
+            class Noticia{
+                function imprimir(){
+                    return "<b>Uma noticia</b>: Muito legal php";
+                }
+            }
+
+            $noticia1 = new Noticia;
+            print($noticia1->imprimir());
 
         ?>
     </body>
