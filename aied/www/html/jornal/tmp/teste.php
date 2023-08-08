@@ -2,19 +2,14 @@
     <body>
         <?php
 
-            $a = 1;
+            $a = 5;
+            $b = 3;
 
-            function teste(){
-                GLOBAL $a;
+            $c = 3;
+            $d = 9;
 
-                define('b', 5);
-
-                echo $a;
-            }
-            
-            teste();
-
-            echo b;
+            echo ($a > $b) || ($c > $d);
+        
 
         ?>
     </body>
