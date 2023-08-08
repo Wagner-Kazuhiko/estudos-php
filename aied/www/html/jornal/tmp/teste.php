@@ -2,14 +2,12 @@
     <body>
         <?php
 
-            $a = 5;
+            $a = random_int(0, 100);
+            while($a < 90){
+                echo strval($a) . ' é menor que 90<br>';
+                $a = random_int(0, 100);
 
-            for($i = 0; $i < $a; $i++){
-                echo strval($i) . ' é menor que 5<br>';
             }
-
-            
-        
 
         ?>
     </body>
