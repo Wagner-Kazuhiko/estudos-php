@@ -2,14 +2,19 @@
     <body>
         <?php
 
-            class Noticia{
-                function imprimir(){
-                    return "<b>Uma noticia</b>: Muito legal php";
-                }
-            }
+            $a = 1;
 
-            $noticia1 = new Noticia;
-            print($noticia1->imprimir());
+            function teste(){
+                GLOBAL $a;
+
+                define('b', 5);
+
+                echo $a;
+            }
+            
+            teste();
+
+            echo b;
 
         ?>
     </body>
