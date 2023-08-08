@@ -2,19 +2,13 @@
     <body>
         <?php
 
-            $a = 'fim';
+            $a = 5;
 
-            switch($a){
-                case 'inicio':
-                    echo 'Estamos no início de tudo';
-                    break;
-                case 'meio':
-                    echo 'Estamos no meio';
-                    break;
-                case 'fim':
-                    echo "Estamos no fim";
-                    break;
+            for($i = 0; $i < $a; $i++){
+                echo strval($i) . ' é menor que 5<br>';
             }
+
+            
         
 
         ?>
