@@ -2,13 +2,24 @@
     <body>
         <?php
 
-            $a = 5;
-            $b = 3;
+            $a = 3;
+            $b = 4;
 
-            $c = 3;
-            $d = 9;
+            if($a < $b){
+                echo '<font color="red">';
 
-            echo ($a > $b) || ($c > $d);
+                    echo "A é maior que B";
+
+                echo '</font>';
+            }
+            else{
+                echo '<font color="red">';
+
+                    echo "A não é maior que B";
+
+                echo '</font>';
+
+            }
         
 
         ?>
