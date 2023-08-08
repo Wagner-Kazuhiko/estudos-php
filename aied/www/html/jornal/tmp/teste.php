@@ -2,23 +2,18 @@
     <body>
         <?php
 
-            $a = 3;
-            $b = 4;
+            $a = 'fim';
 
-            if($a < $b){
-                echo '<font color="red">';
-
-                    echo "A é maior que B";
-
-                echo '</font>';
-            }
-            else{
-                echo '<font color="red">';
-
-                    echo "A não é maior que B";
-
-                echo '</font>';
-
+            switch($a){
+                case 'inicio':
+                    echo 'Estamos no início de tudo';
+                    break;
+                case 'meio':
+                    echo 'Estamos no meio';
+                    break;
+                case 'fim':
+                    echo "Estamos no fim";
+                    break;
             }
         
 
