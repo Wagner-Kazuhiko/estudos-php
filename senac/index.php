@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-    <h1>Olá mundo</h1>
-    <p>Hoje é <?php echo date("d/m/Y H:i:s"); ?></p>
-    <?php echo 42 + 5?>
-</body>
-</html>
+<?php
+require 'inicio.php';
+$idade = 2020 - 1985;
+?>
+
+<h1>Ele tem <?php echo $idade?> anos de idade!</h1>
+
+<?php
+require 'fim.php';
+?>
