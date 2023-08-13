@@ -12,4 +12,12 @@
     }
 
     echo "Daqui 10 anos, você terá " . soma_dez(18);
+
+    echo "<br>";
+
+    function ecoar(){
+        echo "ecoar";
+    }
+
+    ecoar();
 ?>
