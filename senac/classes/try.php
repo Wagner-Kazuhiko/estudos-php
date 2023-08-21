@@ -7,9 +7,12 @@ function inverter($x){
     return 1/$x;
 }
 
-
-echo inverter(10) . "<br>";
-echo inverter(0) . "<br>";
+try{
+    echo inverter(10) . "<br>";
+    echo inverter(0) . "<br>";
+}
+catch(Exception $e){
+    echo "Um erro aconteceu :( <br>";
+}
 echo "Olá mundo <br>";
-
 ?>
