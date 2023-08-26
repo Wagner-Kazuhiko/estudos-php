@@ -25,5 +25,7 @@ echo "<br>";
 echo "Data: " . date('Y/M');
 echo "<br>";
 echo "$nom 'Minotauro' $snom";
+echo "<br>";
+echo "$nom \"Minotauro\" $snom";
 
 ?>
