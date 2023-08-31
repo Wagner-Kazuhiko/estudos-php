@@ -12,8 +12,34 @@
     </header>
 
     <main>
-        <?php 
-            $url = "https://api.coingecko.com/api/v3/simple/price?ids=$coinId&vs_currencies=$currency";
+        <?php
+
+        if(isset($_GET["moeda"])){
+
+            $coinId = 'bitcoin';
+            $currency = 'usd';
+
+            $real = floatval($_GET["moeda"]);
+
+            $inicio = date("m-d-y", strtotime("-7 days"));
+            $fim = date("m-d-y");
+            $url = $url = "https://api.coingecko.com/api/v3/simple/price?ids=$coinId&vs_currencies=$currency&date=$inicio&date=$fim";
+
+            $response = file_get_contents($url);
+            $data = json_decode($response, true);
+
+            if(isset($data[$coinId][$$currency])){
+                $bitcoinPrice = $data[$coinId][$currency];
+                $bitcoinEquivalent = $realValue /$bitcoinPrice;
+
+                echo "Valor em Reais: R$ $realValue<br>";
+                echo "Preço do Bitcoin em USD: $bitcoinPrice<br>";
+                echo "Equivalente em Bitcoin: $bitcoinEquivalent BTC";
+            } else {
+                echo "Não foi possível obter o preço do Bitcoin.";
+            }
+
+        }
         ?>
     </main>
     
