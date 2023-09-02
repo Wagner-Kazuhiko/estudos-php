@@ -49,7 +49,7 @@
         $altura = floatval($_POST["altura"]);
 
         if ($peso > 0 && $altura > 0) {
-            $imc = calcularIMC($peso, $altura);
+            $imc = number_format(calcularIMC($peso, $altura), 2);
             echo "Seu IMC é: " . number_format($imc, 2) . "<br>";
             classificarIMC($imc);
         } else {
