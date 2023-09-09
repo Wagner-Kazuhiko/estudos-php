@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$db = new PDO('mysql:host=localhost;dbname=meu_banco;charset=utf8', 'root', 'root');
+$db = new PDO('mysql:host=localhost;dbname=meu_banco;charset=utf8', 'admin', 'Admin@1234');
 $consulta = $db->query('SELECT * FROM usuarios');
 $usuarios = $consulta->fetchAll();
 

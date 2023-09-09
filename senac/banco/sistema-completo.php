@@ -1,6 +1,6 @@
 <?php
 session_start();
-$db = new PDO('mysql:host=localhost;dbname=meu_banco;charset=utf8', 'root', 'root');
+$db = new PDO('mysql:host=localhost;dbname=meu_banco;charset=utf8', 'admin', 'Admin@1234');
 
 if(array_key_exists('email', $_POST) && array_key_exists('senha', $_POST)){
     $res = $db->query("SELECT * FROM `usuarios` WHERE `email` = '{$_POST['email']}'" );
