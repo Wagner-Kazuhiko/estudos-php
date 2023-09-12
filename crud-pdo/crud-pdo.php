@@ -25,18 +25,21 @@ catch (Exception $e){
 /*-----------------------Insert----------------------------*/
 /* 1 Forma */
 
+/*
 $res = $pdo->prepare("INSERT INTO pessoa(nome, telefone, email)
     VALUES (:n, :t, :e)");
 
-$res->bindValue(":n", "Miriam");
-$res->bindValue(":t", "00000000");
-$res->bindValue(":e", "teste@gmail.com");
+$res->bindValue(":n", "Roberta");
+$res->bindValue(":t", "11111111");
+$res->bindValue(":e", "roberta@gmail.com");
 $res->execute();
+
+*/
 
 /* 2 Forma */
 
-/*
-$pdo->query("INSERT INTO pessoa(nome, telefone, email) VALUES('Miriam', '00000000', 'teste@gmail.com')");
-*/
+
+$pdo->query("INSERT INTO pessoa(nome, telefone, email) VALUES('Paulo', '22222222', 'paulo@gmail.com')");
+
 
 ?>
