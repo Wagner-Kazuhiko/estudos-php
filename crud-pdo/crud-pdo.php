@@ -38,8 +38,30 @@ $res->execute();
 
 /* 2 Forma */
 
-
+/*
 $pdo->query("INSERT INTO pessoa(nome, telefone, email) VALUES('Paulo', '22222222', 'paulo@gmail.com')");
+*/
+
+/*DELETE E UPDATE*/
+
+/*
+$cmd = $pdo->prepare("DELETE FROM pessoa WHERE id = :id");
+$id = 2;
+$cmd->bindValue(":id", $id);
+$cmd->execute();
+
+
+$res = $pdo->query("DELETE FROM pessoa WHERE id = '3'");
+*/
+
+/*
+$cmd = $pdo->prepare("UPDATE pessoa SET email = :e WHERE id = :id");
+$cmd->bindValue(":e", "miriam@email.com");
+$cmd->bindValue(":id", 1);
+$cmd->execute();
+*/
+
+$res = $pdo->query("UPDATE pessoa SET email = 'paulo@hotmail.com' WHERE id = '4'");
 
 
 ?>
