@@ -60,8 +60,21 @@ $cmd->bindValue(":e", "miriam@email.com");
 $cmd->bindValue(":id", 1);
 $cmd->execute();
 */
-
+/*
 $res = $pdo->query("UPDATE pessoa SET email = 'paulo@hotmail.com' WHERE id = '4'");
+*/
 
+/*------------------SELECT------------------------*/
+
+$cmd = $pdo->prepare("SELECT * FROM pessoa WHERE id = :id");
+$cmd->bindValue(":id", 4);
+$cmd->execute();
+$resultado = $cmd->fetch(PDO::FETCH_ASSOC); //ou fetchAll();
+
+echo "<pre>";
+
+print_r($resultado);
+
+echo "</pre>";
 
 ?>
