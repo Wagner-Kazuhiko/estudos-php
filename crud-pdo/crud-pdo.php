@@ -71,10 +71,8 @@ $cmd->bindValue(":id", 4);
 $cmd->execute();
 $resultado = $cmd->fetch(PDO::FETCH_ASSOC); //ou fetchAll();
 
-echo "<pre>";
-
-print_r($resultado);
-
-echo "</pre>";
+foreach($resultado as $key => $value){
+    echo $key.": ".$value."<br>";
+}
 
 ?>
